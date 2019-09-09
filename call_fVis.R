@@ -91,7 +91,7 @@ R.SHD <- "DEM10_SHD.asc"
 
 pdf(paste(W.DIR,OUT.DIR,"DESTLI0500950004_K.pdf",sep=""), 
     height=4,width=5.7)
-fMapK(W.DIR,
+fMapLSK(W.DIR,
      IN.DIR,
      R.LS1,
      R.LS2,

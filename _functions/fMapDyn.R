@@ -4,7 +4,7 @@ fMapDyn <- function(W.DIR,
                  R.LS,
                  R.K,
                  R.SHD,
-                 CROP,
+                 CROP.NAME,
                  D.L,
                  ALPHA){
 p <- read.csv2(file.path(W.DIR,IN.DIR,V.DYN))

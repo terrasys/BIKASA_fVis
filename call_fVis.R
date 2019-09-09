@@ -7,9 +7,7 @@ FUNC.DIR = "_function/"
 print("Import functions")
 #-----------------------------------------------------------------------------------------------------
 source(file.path(W.DIR,FUNC.DIR,"fPackages.R"))
-source(file.path(W.DIR,FUNC.DIR,"fVisWW1.R"))
-source(file.path(W.DIR,FUNC.DIR,"fVisMS1.R"))
-source(file.path(W.DIR,FUNC.DIR,"fMap.R"))
+source(file.path(W.DIR,FUNC.DIR,"fVis.R"))
 source(file.path(W.DIR,FUNC.DIR,"fMap.R"))
 source(file.path(W.DIR,FUNC.DIR,"fMapK.R"))
 #-----------------------------------------------------------------------------------------------------
@@ -28,11 +26,12 @@ R.SHD <- "DESTLI0503850019/DEM10_SHD.asc"
 V.DYN <- "DESTLI0503850019_RADOLANGT10MM_buffer5000_202.csv"
 pdf(paste(W.DIR,OUT.DIR,"DESTLI0503850019_WW1.pdf",sep=""), 
     height=4.5,width=10)
-fVisWW1(W.DIR,
+fVis(W.DIR,
      IN.DIR,
      V.DYN,
      R.LS,
-     R.K)
+     R.K,
+     CROP)
 dev.off()
 
 V.DYN <- "DESTLI0503850019_RADOLANGT10MM_buffer5000_215.csv"
@@ -41,7 +40,8 @@ pdf(paste(W.DIR,OUT.DIR,"DESTLI0503850019_MS1.pdf",sep=""),
 fVisMS1(W.DIR,
         IN.DIR,
         V.DYN,
-        R.LS)
+        R.LS,
+        CROP)
 dev.off()
 
 #Mapping of DOY-specific soil erosion maps
@@ -70,7 +70,7 @@ fMap(W.DIR,
      R.LS,
      R.K,
      R.SHD,
-     CROP="Winterweizen",
+     CROP.NAME="Winterweizen",
      D.L=50,
      ALPHA=0.6)
 dev.off()

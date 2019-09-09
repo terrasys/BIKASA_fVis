@@ -31,17 +31,17 @@ fVis(W.DIR,
      V.DYN,
      R.LS,
      R.K,
-     CROP)
+     PLANT)
 dev.off()
 
 V.DYN <- "DESTLI0503850019_RADOLANGT10MM_buffer5000_215.csv"
 pdf(paste(W.DIR,OUT.DIR,"DESTLI0503850019_MS1.pdf",sep=""), 
     height=4.5,width=9.5)
-fVisMS1(W.DIR,
+fVis(W.DIR,
         IN.DIR,
         V.DYN,
         R.LS,
-        CROP)
+        PLANT)
 dev.off()
 
 #Mapping of DOY-specific soil erosion maps
@@ -49,13 +49,13 @@ dev.off()
 V.DYN <- "DESTLI0503850019_RADOLANGT10MM_buffer5000_215.csv"
 pdf(paste(W.DIR,OUT.DIR,"DESTLI0503850019_MS2.pdf",sep=""), 
     height=4.5,width=6)
-fMap(W.DIR,
+fMapDyn(W.DIR,
         IN.DIR,
         V.DYN,
         R.LS,
         R.K,
         R.SHD,   
-        CROP="Mais",
+        CROP.NAME="Mais",
         D.L=50,
         ALPHA=0.6)
 dev.off()

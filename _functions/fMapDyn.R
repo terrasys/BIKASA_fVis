@@ -1,4 +1,4 @@
-fMap <- function(W.DIR,
+fMapDyn <- function(W.DIR,
                  IN.DIR,
                  V.DYN,
                  R.LS,

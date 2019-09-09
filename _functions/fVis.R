@@ -3,14 +3,14 @@ fVis<- function(W.DIR,
                  V.DYN,
                  R.LS,
                  R.K,
-                 CROP){
+                 PLANT){
 #Plotting
 DOY <- DOY
 #shd <- raster(file.path(W.DIR,IN.DIR,R.SHD))
 ls <- raster(file.path(W.DIR,IN.DIR,R.LS))
 k <- raster(file.path(W.DIR,IN.DIR,R.K))
 
-if(CROP==202){
+if(PLANT==202){
 pb <- txtProgressBar(min=1, max=length(DOY), style=3)
 for(i in 1:length(DOY)){
   #Winterweizen
@@ -165,7 +165,8 @@ for(i in 1:length(DOY)){
   setTxtProgressBar(pb, i)
 }
 }
-if(CROP==215){pb <- txtProgressBar(min=1, max=length(DOY), style=3)
+if(PLANT==215){
+  pb <- txtProgressBar(min=1, max=length(DOY), style=3)
 for(i in 1:length(DOY)){
   #Maize
   {
